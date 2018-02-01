@@ -14,6 +14,7 @@ rtview_utils.set_targeturl('http://localhost:3275');// this is the default
 // Name of the RTView caches created in this demo
 var cacheName1 = 'LightStreamerStockDemo';
 
+var debug = false;
 
 //var myClient = new ls.LightstreamerClient("http://localhost:8080","DEMO");  
 var myClient = new ls.LightstreamerClient("https://push.lightstreamer.com","DEMO");  
@@ -38,12 +39,12 @@ mySubscription.addListener({
     console.log("UNSUBSCRIBED");
   },
   onItemUpdate: function(obj) {
-    console.log(obj.getValue("stock_name") + ": " + obj.getValue("last_price"));
+    if (debug) console.log(obj.getValue("stock_name") + ": " + obj.getValue("last_price"));
     // copy object values for this topic to rtview data object
     var data = {};
     data.stock_name=obj.getValue("stock_name");
     data.last_price=obj.getValue("last_price");
-    console.log('... sending: ' + JSON.stringify(data));
+    if (debug) console.log('... sending: ' + JSON.stringify(data));
     rtview_utils.send_datatable(cacheName1, data);
   }
 });
