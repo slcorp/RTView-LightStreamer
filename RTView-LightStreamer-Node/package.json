@@ -1,0 +1,20 @@
+{
+  "name": "rtview_lightstreamer_feed",
+  "version": "1.0.0",
+  "description": "Node client that subscribes to LightStreamer demo data and pushes it to RTView Data Server",
+  "keywords": [
+    "real-time",
+    "lightstreamer",
+    "rtview"
+  ],
+  "homepage": "http://www.sl.com",
+
+  "main": "rtview_lightstreamer_feed.js",
+  "engines": [
+    "node"
+  ],
+  "dependencies": {
+    "lightstreamer-client": ">=6.2.3",
+    "request": ""
+  }
+}
