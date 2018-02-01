@@ -5,7 +5,7 @@
 ## Overview
 By following the steps, described below, you will be:
 * Installing and running an RTView data server on your local computer.
-* Installing and running a node script that subscribes to a few LightStreamer topics and pushes the data to the RTView data server.
+* Installing and running a node script that subscribes to LightStreamer's Stock Demo and pushes the data to the RTView data server.
 * Viewing preexisting displays, populated by data, coming via a servlet within RTView, through your free trial account on RTViewCloud.
 
 
@@ -69,7 +69,7 @@ Unzip the RTViewDataServer-Mini.zip using your favorite zip/unzip utility.
 
 *node rtview_lightstreamer_feed*
 
-	This will start the node script which subscribes to a few LightStreamer topics and pushes 
+	This will start the node script which subscribes to LightStreamer's Stock Demo and pushes 
 	the data into the RTView data server, which was set up in the previous section.
 
 
@@ -125,9 +125,9 @@ http://localhost:3270/rtvquery
 
 * Click on Open ….
 
-* Double click on ls_xxxxx_raw_tables.
+* Double click on ls_stock_demo_raw_tables.
 
-	This will load the pn_market_data_raw_tables display into the editor. 
+	This will load the ls_stock_demo_raw_tables display into the editor. 
 	This display is configured to connect to your local RTView data server and collect data. This process then populates the display with live data that is being collected by the node script from LightStreamer.
 
 
@@ -177,9 +177,9 @@ http://lightstreamer-iot-server.slsandbox.com/rtvquery
 
 * Click on Open ….
 
-* Double click on ls_xxxxx_raw_tables.
+* Double click on ls_stock_demo_raw_tables.
 
-	This will load the pn_market_data_raw_tables display into the editor. 
+	This will load the ls_stock_demo_raw_tables display into the editor. 
 	If your backend data server is active, this will connect your display to 
 	SL RTView's LightStreamer IoT data server that is running on an Amazon instance. 
 
